@@ -96,9 +96,8 @@ const Header: React.FC = () => {
       <nav className="container">
         <Box className="social-container" gap={2}>
           {socials.map((social) => (
-            <div className={social.name}>
+            <div key={social.url} className={social.name}>
               <ChakraLink
-                key={social.url}
                 href={social.url}
                 color={colors.text}
                 _hover={{ color: colors.textHover }}
@@ -111,9 +110,8 @@ const Header: React.FC = () => {
         </Box>
         <Box className={`nav-container ${isMenuOpen ? 'open' : ''}`} gap={8}>
           {navLinks.map((navLink) => (
-            <div className={navLink.name}>
+            <div key={navLink.label} className={navLink.name}>
               <ChakraLink
-                key={navLink.label}
                 color={colors.text}
                 fontSize={fontSize}
                 _hover={{ color: colors.textHover }}

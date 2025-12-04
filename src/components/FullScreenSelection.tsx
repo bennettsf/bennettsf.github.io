@@ -1,10 +1,11 @@
-import { VStack } from '@chakra-ui/react';
+import { Box, VStack } from '@chakra-ui/react';
 import type { StackProps } from '@chakra-ui/react';
 import React, { type ReactNode } from 'react';
 import { useColorModeValue } from './ui/color-mode';
 
 interface FullScreenSectionProps extends StackProps {
   children: ReactNode;
+  maxW?: string;
 }
 
 /**
@@ -13,7 +14,7 @@ interface FullScreenSectionProps extends StackProps {
  * - Sets background/text color according to color mode
  * - Passes additional Chakra props via spread operator
  */
-const FullScreenSection: React.FC<FullScreenSectionProps> = ({ children, ...boxProps }) => {
+const FullScreenSection: React.FC<FullScreenSectionProps> = ({ children, maxW, ...boxProps }) => {
   const bg = useColorModeValue('gray.50', 'gray.800');
   const color = useColorModeValue('black', 'white');
 
@@ -23,9 +24,9 @@ const FullScreenSection: React.FC<FullScreenSectionProps> = ({ children, ...boxP
       color={color}
       {...boxProps} // still passes any extra props from parent
     >
-      <VStack px={4} maxWidth="1280px" minHeight="100vh" gap={8}>
+      <Box minHeight="100vh" maxW={maxW ? maxW : ''} gap={8}>
         {children}
-      </VStack>
+      </Box>
     </VStack>
   );
 };

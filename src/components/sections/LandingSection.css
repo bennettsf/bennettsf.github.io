@@ -2,6 +2,23 @@
   animation: blink 1s step-end infinite;
 }
 
+.description-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.description {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.word-game {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
 @keyframes blink {
   0%,
   50% {
@@ -10,5 +27,14 @@
   50.1%,
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
