@@ -13,7 +13,9 @@ const WordGuessesContext = createContext<WordGuessesContextType | undefined>(und
 export const WordGuessesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [guesses, setGuesses] = useState<{ word: string; points: number }[]>([]);
   const pointTotal = guesses.reduce((total, guess) => total + guess.points, 0);
-  const [highScore, setHighScore] = useState(0);
+  const [highScore, setHighScore] = useState(
+    Number(localStorage.getItem('wordGameHighScore')) || 0
+  );
 
   const addGuess = (guess: string, points: number) => {
     setGuesses((prevGuesses) => [...prevGuesses, { word: guess, points: points }]);

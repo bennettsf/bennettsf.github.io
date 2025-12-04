@@ -40,7 +40,7 @@ const socials: Social[] = [
   {
     icon: <FaLinkedin size={iconSize} />,
     name: 'linkedin',
-    url: 'https://www.linkedin.com/s/bennett-fife/',
+    url: 'https://www.linkedin.com/in/bennett-fife',
   },
   {
     icon: <FaInstagram size={iconSize} />,
@@ -98,6 +98,7 @@ const Header: React.FC = () => {
           {socials.map((social) => (
             <div key={social.url} className={social.name}>
               <ChakraLink
+                target="_blank"
                 href={social.url}
                 color={colors.text}
                 _hover={{ color: colors.textHover }}
