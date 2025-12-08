@@ -2,11 +2,7 @@ import { Image, Box, Text } from '@chakra-ui/react';
 import FullScreenSection from '../FullScreenSelection';
 import { useTypewriter } from '@/hooks/useTypewriter';
 import './LandingSection.css';
-import { GuessesSection } from '../WordGame/GuessSection';
-import WordGame from '../WordGame/WordGame';
 import profile_pic from '@/assets/bennettProfilePic.png';
-import { useColorModeValue } from '../ui/color-mode';
-import RulesSection from '../WordGame/RulesSection';
 
 const welcomeText = 'Welcome to My Portfolio !';
 const secondLineText = "I'm Bennett, a Full-Stack Developer";
@@ -20,7 +16,7 @@ const LandingSection = () => {
   });
 
   const slideInDelayedClass = secondLine.isComplete ? 'slide-in-left' : 'slide-in-hidden';
-  const slideInClass = secondLine.isComplete ? 'slide-in-left-delayed' : 'slide-in-hidden';
+  // const slideInClass = secondLine.isComplete ? 'slide-in-left-delayed' : 'slide-in-hidden';
   const slideInRightClass = secondLine.isComplete ? 'slide-in-right' : 'slide-in-right-hidden';
 
   return (
