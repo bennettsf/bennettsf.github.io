@@ -1,8 +1,8 @@
 import { Box } from '@chakra-ui/react';
 import Header from './components/Header/Header';
-import LandingSection from './components/sections/LandingSection';
-import ProjectsSection from './components/sections/ProjectsSection';
-import ContactSection from './components/sections/ContactSection';
+import LandingSection from './components/Landing/LandingSection';
+import ProjectsSection from './components/Projects/ProjectsSection';
+import ContactSection from './components/WordGame/WordGameSection';
 import { WordGuessesProvider } from './context/WordGuessesContext';
 import { SelectedTilesProvider } from './context/SelectedTilesContext';
 

@@ -54,7 +54,7 @@
   {
     "id": "portfolio",
     "title": "Developer Portfolio",
-    "description": "A responsive web portfolio built with Vite, React, TypeScript, and Chakra UI to showcase projects, skills, and professional experience.",
+    "description": "A responsive web portfolio built with Vite, React, TypeScript, and Chakra UI to showcase my projects, skills, and professional experience.",
     "image": "",
     "featured": true,
     "technologies": {

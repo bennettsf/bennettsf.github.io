@@ -10,7 +10,7 @@ import Tiles from './Tiles';
 function WordGame() {
   // create 5x5 Chakra UI Grid for word game
   const { selectedTiles, setSelectedTiles } = useSelectedTiles();
-  const [letters] = useState(() => randomLetters());
+  const [letters, setLetters] = useState(() => randomLetters());
   const { colorMode } = useColorMode();
   const { guesses, addGuess, resetGuesses } = useWordGuesses();
 
@@ -23,11 +23,23 @@ function WordGame() {
     const pointValue = selectedTiles.reduce((total, tile) => total + tile.points, 0);
     // convert selected tiles to a string and add to guesses context
     const guessString = guess.join('');
+    for (let i = 0; i < guesses.length; i++) {
+      if (guesses[i].word.toLowerCase() === guessString.toLowerCase()) {
+        // word already guessed
+        setSelectedTiles([]);
+        return;
+      }
+    }
     addGuess(guessString, pointValue);
 
-    // Calculate new total including this guess
-
     setSelectedTiles([]);
+  };
+
+  const handleReset = () => {
+    setSelectedTiles([]);
+    // randomize letters
+    setLetters(randomLetters());
+    resetGuesses();
   };
 
   return (
@@ -36,10 +48,22 @@ function WordGame() {
         <Tiles letters={letters} />
       </Grid>
       <Box display="flex" gap={2}>
-        <Button variant={colorMode === 'dark' ? 'ghost' : 'solid'} onClick={handleSubmit}>
+        <Button
+          _focus={{ outline: 'none' }}
+          _focusVisible={{ outline: 'none' }}
+          _active={{ outline: 'none' }}
+          variant={colorMode === 'dark' ? 'ghost' : 'solid'}
+          onClick={handleSubmit}
+        >
           Submit
         </Button>
-        <Button variant={colorMode === 'dark' ? 'ghost' : 'solid'} onClick={resetGuesses}>
+        <Button
+          _focus={{ outline: 'none' }}
+          _focusVisible={{ outline: 'none' }}
+          _active={{ outline: 'none' }}
+          variant={colorMode === 'dark' ? 'ghost' : 'solid'}
+          onClick={handleReset}
+        >
           <FaArrowRotateLeft />
         </Button>
       </Box>

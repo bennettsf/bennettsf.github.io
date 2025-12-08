@@ -1,8 +1,16 @@
 import React, { useEffect, useRef, useState, type JSX } from 'react';
 import { Box, Link as ChakraLink } from '@chakra-ui/react';
 import { FiMail } from 'react-icons/fi'; // envelope
-import { FaCode, FaGithub, FaHome, FaInstagram, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
-import { GrContact } from 'react-icons/gr';
+import {
+  FaCode,
+  FaGithub,
+  FaHome,
+  FaInstagram,
+  FaLinkedin,
+  FaBars,
+  FaTimes,
+  FaGamepad,
+} from 'react-icons/fa';
 import { LuMoon, LuSun } from 'react-icons/lu';
 import { useColorMode } from '../ui/color-mode';
 import './Header.css';
@@ -31,7 +39,7 @@ const colors = {
 const navLinks: NavLink[] = [
   { icon: <FaHome size={iconSize} />, name: 'home', label: 'home', text: 'Home' },
   { icon: <FaCode size={iconSize} />, name: 'projects', label: 'projects', text: 'Projects' },
-  { icon: <GrContact size={iconSize} />, name: 'contact', label: 'contact', text: 'Contact' },
+  { icon: <FaGamepad size={iconSize} />, name: 'word-game', label: 'word-game', text: 'Word Game' },
 ];
 
 const socials: Social[] = [

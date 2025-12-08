@@ -24,7 +24,7 @@ function RulesSection() {
           <strong>Select tiles</strong> to form words by clicking on the grid
         </List.Item>
         <List.Item>
-          <strong>Path</strong> of the selected tiles does not matter!
+          <strong>The path</strong> of the selected tiles does not matter!
         </List.Item>
         <List.Item>
           <strong>Click again</strong> on a selected tile to deselect it and all tiles after it

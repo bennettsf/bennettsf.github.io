@@ -12,7 +12,6 @@ const welcomeText = 'Welcome to My Portfolio !';
 const secondLineText = "I'm Bennett, a Full-Stack Developer";
 
 const LandingSection = () => {
-  const colorMode = useColorModeValue('light', 'dark');
   const firstLine = useTypewriter({ text: welcomeText, speed: 70 });
   const secondLine = useTypewriter({
     text: secondLineText,
@@ -32,17 +31,17 @@ const LandingSection = () => {
         minH="100vh"
         display="flex"
         flexDirection={{ base: 'column', lg: 'row' }}
-        justifyContent="space-between"
+        justifyContent="center"
         alignContent="center"
         overflow="hidden"
       >
         <Box
           className="introduction"
-          alignSelf="flex-start"
           m="20px"
+          height="100%"
           display="flex"
           flexDirection="column"
-          gap={9}
+          gap={75}
         >
           <Text fontSize="2xl" className="typewriter ">
             {firstLine.displayedText}
@@ -51,17 +50,33 @@ const LandingSection = () => {
             {secondLine.displayedText}
             {secondLine.isComplete && <span className="char-blink">.</span>}
           </Text>
-          <Text className={slideInDelayedClass} fontSize="xl" maxWidth="600px">
-            I specialize in building web applications using modern technologies like{' '}
-            <strong>React</strong>, <strong>Node.js</strong>, and <strong>TypeScript</strong>.{' '}
-            <u>Try out the word game I created on the page!</u>
-          </Text>
-          <Text className={slideInDelayedClass} fontSize="xl" maxWidth="600px">
-            I live in <strong>Seattle</strong> and some of my interests include{' '}
-            <strong>hiking in the PNW</strong>, <strong>gaming</strong>, and{' '}
-            <strong>baseball</strong>.
-          </Text>
-          <Box className={slideInClass} display="flex" alignItems="center">
+          <Box display="flex" flexDirection="column" gap={10}>
+            <Text className={slideInDelayedClass} fontSize="xl" maxWidth="600px">
+              I specialize in building web applications using modern technologies like{' '}
+              <strong>React</strong>, <strong>Node.js</strong>, and <strong>TypeScript</strong>
+              .{' '}
+            </Text>
+            <Text className={slideInDelayedClass} fontSize="xl" maxWidth="600px">
+              Below, you can find some of the projects I've worked on as well as a fun word game I
+              built!
+            </Text>
+            <Text className={slideInDelayedClass} fontSize="xl" maxWidth="600px">
+              I'm from <strong>Seattle, WA</strong> and some of my interests include{' '}
+              <strong>hiking</strong>, <strong>gaming</strong>, and <strong>baseball</strong>.
+            </Text>
+            <Text className={slideInDelayedClass} fontSize="xl" maxWidth="600px">
+              Feel free to reach out to me or connect through any of my socials above!
+            </Text>
+          </Box>
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center">
+          <Box
+            className={slideInRightClass}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            m="20px"
+          >
             <Image
               src={profile_pic}
               alt="Bennett's Profile Picture"
@@ -69,30 +84,6 @@ const LandingSection = () => {
               boxSize="400px"
               border="2px solid #14b8a6"
             />
-          </Box>
-        </Box>
-        <Box
-          display="flex"
-          flexDirection="column"
-          justifyContent="space-evenly"
-          p={5}
-          gap={5}
-          className={slideInRightClass}
-        >
-          <RulesSection />
-          <Box
-            className="word-game"
-            display="flex"
-            flexDirection={{ md: 'row', sm: 'column' }}
-            justifyContent="space-evenly"
-            gap={4}
-            p={6}
-            border="2px solid #14b8a6"
-            borderRadius="md"
-            bg={colorMode === 'light' ? 'gray.50' : 'gray.800'}
-          >
-            <GuessesSection />
-            <WordGame />
           </Box>
         </Box>
       </Box>

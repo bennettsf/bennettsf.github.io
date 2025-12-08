@@ -2,8 +2,8 @@ import { Box, Grid, Heading } from '@chakra-ui/react';
 import FullScreenSection from '../FullScreenSelection';
 import type { Project } from '@/models/Project';
 import projectsData from '@/data/projects.json';
-import ProjectTags from '../Projects/ProjectTags';
-import ProjectCard from '../Projects/ProjectCard';
+import ProjectTags from './ProjectTags';
+import ProjectCard from './ProjectCard';
 
 const ProjectsSection = () => {
   // order projects by featured status
