@@ -76,7 +76,7 @@ const LandingSection = () => {
             <Image
               src={profile_pic}
               alt="Bennett's Profile Picture"
-              borderRadius="50px"
+              borderRadius="full"
               boxSize="400px"
               border="2px solid #14b8a6"
             />
