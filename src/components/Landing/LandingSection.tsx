@@ -4,7 +4,7 @@ import { useTypewriter } from '@/hooks/useTypewriter';
 import './LandingSection.css';
 import profile_pic from '@/assets/bennettProfilePic.png';
 
-const welcomeText = 'Welcome to My Portfolio !';
+const welcomeText = 'Welcome to My Portfolio!';
 const secondLineText = "I'm Bennett, a Full-Stack Developer";
 
 const LandingSection = () => {
@@ -20,7 +20,7 @@ const LandingSection = () => {
   const slideInRightClass = secondLine.isComplete ? 'slide-in-right' : 'slide-in-right-hidden';
 
   return (
-    <FullScreenSection id="home-section" alignItems="stretch">
+    <FullScreenSection id="home-section">
       <Box
         pt="72px"
         w="100%"

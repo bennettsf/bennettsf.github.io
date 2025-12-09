@@ -12,11 +12,15 @@ const ProjectsSection = () => {
   ) as Project[];
 
   return (
-    <FullScreenSection maxW="1280px" textAlign="center" alignItems="center" py={16}>
+    <FullScreenSection
+      maxW="1280px"
+      textAlign="center"
+      alignItems="center"
+      py={16}
+      id="projects-section"
+    >
       <Box display="flex" flexDirection="column" justifyContent="space-evenly" gap={8}>
-        <Heading size={{ md: '4xl', sm: '3xl' }} id="projects-section">
-          Featured Projects
-        </Heading>
+        <Heading size={{ md: '4xl', sm: '3xl' }}>Featured Projects</Heading>
         <ProjectTags />
         {/* Render project cards here using the projects state */}
         <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={6}>
