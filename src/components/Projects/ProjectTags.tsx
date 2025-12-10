@@ -31,6 +31,7 @@ function ProjectTags({}) {
       <Stack
         direction="row"
         gap={2}
+        p={3}
         overflowX="auto"
         display="flex"
         justifyContent="center"
@@ -43,6 +44,13 @@ function ProjectTags({}) {
             colorPalette={!selectedTags.includes(tag) ? 'teal' : 'gray'}
             variant="solid"
             onClick={handleClick}
+            cursor="pointer"
+            border="2px solid transparent"
+            transition="all 0.2s ease-in-out"
+            _hover={{
+              borderColor: 'teal.500',
+              transform: 'translateY(-2px)',
+            }}
           >
             <Tag.StartElement>
               <HiPlus />
