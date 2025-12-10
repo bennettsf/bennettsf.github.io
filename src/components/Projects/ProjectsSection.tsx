@@ -4,12 +4,19 @@ import type { Project } from '@/models/Project';
 import projectsData from '@/data/projects.json';
 import ProjectTags from './ProjectTags';
 import ProjectCard from './ProjectCard';
+import { useSelectedTags } from '@/context/SelectedTagsContext';
 
 const ProjectsSection = () => {
+  const { selectedTags } = useSelectedTags();
   // order projects by featured status
   const projects = [...projectsData].sort((a, b) =>
     b.featured === a.featured ? 0 : b.featured ? 1 : -1
   ) as Project[];
+
+  const filteredProjects =
+    selectedTags.includes('All') || selectedTags.length === 0
+      ? projects
+      : projects.filter((project) => project.tags.some((tag) => selectedTags.includes(tag)));
 
   return (
     <FullScreenSection
@@ -24,7 +31,7 @@ const ProjectsSection = () => {
         <ProjectTags />
         {/* Render project cards here using the projects state */}
         <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={6}>
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </Grid>
