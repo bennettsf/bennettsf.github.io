@@ -1,4 +1,4 @@
-import { Box, Button, Grid } from '@chakra-ui/react';
+import { Box, Button, Grid, Text } from '@chakra-ui/react';
 import { useColorMode } from '../ui/color-mode';
 import { useState } from 'react';
 import { useWordGuesses } from '@/context/WordGuessesContext';
@@ -38,12 +38,25 @@ function WordGame() {
   const handleReset = () => {
     setSelectedTiles([]);
     // randomize letters
-    setLetters(randomLetters());
+    setLetters(() => randomLetters());
     resetGuesses();
   };
 
   return (
     <Box display="flex" flexDirection="column" gap={5} alignItems="center" height="100%">
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        width="100%"
+        px={2}
+        border="1px solid"
+        borderRadius="md"
+        p={2}
+        fontSize="xl"
+      >
+        <Text>{selectedTiles.map((tile) => tile.letter).join('')} </Text>
+        <Text>{selectedTiles.reduce((total, tile) => total + tile.points, 0)} Pts</Text>
+      </Box>
       <Grid templateColumns="repeat(5, 1fr)" templateRows="repeat(5, 1fr)" gap={2}>
         <Tiles letters={letters} />
       </Grid>

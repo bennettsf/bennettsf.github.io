@@ -98,9 +98,8 @@ const Header: React.FC = () => {
       insetX={0}
       top={0}
       zIndex={10}
-      backgroundColor={
-        colorMode === 'dark' ? 'rgba(26, 32, 44, 0.75)' : 'rgba(247, 250, 252, 0.75)'
-      }
+      backgroundColor={colorMode === 'dark' ? 'gray.800' : 'gray.50'}
+      opacity={0.75}
       transition="transform 0.3s ease-in-out"
     >
       <nav className="container">

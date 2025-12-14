@@ -37,6 +37,7 @@ function ProjectTags({}) {
         justifyContent="center"
         flexWrap="wrap"
       >
+        Tags:
         {tags.map((tag) => (
           <Tag.Root
             key={tag}

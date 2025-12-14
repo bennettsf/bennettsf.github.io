@@ -8,7 +8,7 @@ interface SelectedTagsContextType {
 const SelectedTagsContext = createContext<SelectedTagsContextType | undefined>(undefined);
 
 export const SelectedTagsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>(['All']);
   return (
     <SelectedTagsContext.Provider value={{ selectedTags, setSelectedTags }}>
       {children}

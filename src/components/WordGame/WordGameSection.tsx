@@ -10,7 +10,7 @@ const WordGameSection = () => {
       maxW="1280px"
       textAlign="center"
       alignItems="center"
-      py={16}
+      py={4}
       id="word-game-section"
     >
       <Box display="flex" flexDirection="column" justifyContent="space-evenly" p={5} gap={5}>
