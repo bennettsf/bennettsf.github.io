@@ -5,7 +5,6 @@ import { useColorModeValue } from '../ui/color-mode';
 import './ProjectCard.css';
 
 function ProjectCard({ project }: { project: Project }) {
-  const cardBg = useColorModeValue('white', 'gray.800');
   const textColor = useColorModeValue('black', 'white');
 
   return (

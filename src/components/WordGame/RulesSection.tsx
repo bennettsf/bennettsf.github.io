@@ -1,9 +1,6 @@
 import { Box, Heading, List } from '@chakra-ui/react';
-import { useColorMode } from '../ui/color-mode';
 
 function RulesSection() {
-  const { colorMode } = useColorMode();
-
   return (
     <Box
       display="flex"

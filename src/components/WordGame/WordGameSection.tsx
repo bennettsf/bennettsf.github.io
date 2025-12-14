@@ -3,10 +3,8 @@ import FullScreenSection from '../FullScreenSelection';
 import RulesSection from './RulesSection';
 import { GuessesSection } from './GuessSection';
 import WordGame from './WordGame';
-import { useColorMode } from '../ui/color-mode';
 
 const WordGameSection = () => {
-  const { colorMode } = useColorMode();
   return (
     <FullScreenSection
       maxW="1280px"
