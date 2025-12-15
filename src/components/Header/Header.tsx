@@ -99,7 +99,7 @@ const Header: React.FC = () => {
       top={0}
       zIndex={10}
       backgroundColor={colorMode === 'dark' ? 'gray.800' : 'gray.50'}
-      opacity={0.75}
+      opacity={0.95}
       transition="transform 0.3s ease-in-out"
     >
       <nav className="container">

@@ -1,21 +1,13 @@
 import { Box, Heading, List } from '@chakra-ui/react';
+import './RulesSection.css';
 
 function RulesSection() {
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      justifyContent="center"
-      textAlign="left"
-      p={6}
-      border="2px solid #14b8a6"
-      borderRadius="md"
-      width="100%"
-    >
-      <Heading as="h3" size="lg" mb={4} textAlign="center">
+    <Box className="rules-section">
+      <Heading as="h3" size="lg" className="rules-heading">
         How to Play
       </Heading>
-      <List.Root gap={3} fontSize="md">
+      <List.Root className="rules-list">
         <List.Item>
           <strong>Select tiles</strong> to form words by clicking on the grid
         </List.Item>

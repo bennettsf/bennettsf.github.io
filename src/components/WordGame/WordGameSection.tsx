@@ -4,7 +4,10 @@ import RulesSection from './RulesSection';
 import { GuessesSection } from './GuessSection';
 import WordGame from './WordGame';
 
+import { useColorModeValue } from '../ui/color-mode';
+
 const WordGameSection = () => {
+  const colorMode = useColorModeValue('black', 'white');
   return (
     <FullScreenSection
       maxW="1280px"
@@ -23,7 +26,7 @@ const WordGameSection = () => {
           justifyContent="space-evenly"
           gap={4}
           p={6}
-          border="2px solid #14b8a6"
+          border={`2px solid ${colorMode}`}
           borderRadius="md"
         >
           <GuessesSection />
