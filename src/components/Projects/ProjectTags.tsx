@@ -1,5 +1,4 @@
 import { useSelectedTags } from '@/context/SelectedTagsContext';
-
 import { getTopTags } from '@/hooks/getTopTags';
 import { Box, Stack, Tag } from '@chakra-ui/react';
 import React from 'react';
@@ -19,7 +18,11 @@ function ProjectTags({}) {
 
     // add tag and remove "All" or remove tag and add "All" if no tags left
     if (!selectedTags.includes(tag)) {
-      setSelectedTags([...selectedTags.filter((t) => t !== 'All'), tag]);
+      if (selectedTags.includes('All')) {
+        setSelectedTags([tag]);
+        return;
+      }
+      setSelectedTags([...selectedTags, tag]);
     } else {
       const newTags = selectedTags.filter((t) => t !== tag);
       setSelectedTags(newTags.length === 0 ? ['All'] : newTags);

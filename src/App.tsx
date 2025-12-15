@@ -2,11 +2,12 @@ import { Box } from '@chakra-ui/react';
 import Header from './components/Header/Header';
 import LandingSection from './components/Landing/LandingSection';
 import ProjectsSection from './components/Projects/ProjectsSection';
-import ContactSection from './components/WordGame/WordGameSection';
 import { WordGuessesProvider } from './context/WordGuessesContext';
 import { SelectedTilesProvider } from './context/SelectedTilesContext';
 import { SelectedTagsProvider } from './context/SelectedTagsContext';
 import backgroundImage from '@/assets/mt_ranier_milkyway.webp';
+import WordGameSection from './components/WordGame/WordGameSection';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
           <SelectedTagsProvider>
             <ProjectsSection />
           </SelectedTagsProvider>
-          <ContactSection />
+          <WordGameSection />
+          <Footer />
         </Box>
       </SelectedTilesProvider>
     </WordGuessesProvider>
