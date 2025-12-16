@@ -8,7 +8,11 @@ function Footer() {
   return (
     <Box as="footer" className="footer" borderColor={colorMode} color={colorMode}>
       <Text>
-        © {new Date().getFullYear()} <a href="">Bennett Fife</a>. All rights reserved.
+        © {new Date().getFullYear()}{' '}
+        <a target="_blank" href="https://www.linkedin.com/in/bennett-fife">
+          Bennett Fife
+        </a>
+        . All rights reserved.
       </Text>
       <Text>Built with React and Chakra UI.</Text>
     </Box>

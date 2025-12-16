@@ -10,7 +10,7 @@ export function GuessesSection() {
   return (
     <Box minWidth="250px" display="flex" flexDirection="column" textAlign="center" gap={5}>
       <Text fontSize="xl" fontWeight="bold" color={guesses.length === 5 ? 'green.400' : ''}>
-        {guesses.length}/5
+        Selected Words: {guesses.length}/5
       </Text>
       {/* Guesses - takes up remaining space */}
       <Box flex="1" display="flex" flexDirection="column" gap={2} overflowY="auto" px={2}>

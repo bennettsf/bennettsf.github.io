@@ -64,7 +64,7 @@ function Tiles({ letters }: TilesProps) {
           userSelect="none"
         >
           <Box className="letter">{letter.toUpperCase()}</Box>
-          <Box className="point" position="absolute" bottom="2px" right="4px" fontSize="xs">
+          <Box className="point" position="absolute" bottom="2px" right="4px" fontSize="0.7rem">
             {point}
           </Box>
         </GridItem>
