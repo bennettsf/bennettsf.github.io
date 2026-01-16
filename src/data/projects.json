@@ -88,5 +88,36 @@
       "github": "https://github.com/bennettsf/WordGame",
       "demo": null
     }
+  },
+  {
+    "id": "osrs-bank-tags",
+    "title": "OSRS Bank Tags",
+    "description": "A full-stack web app for publishing, managing, and exporting Old School RuneScape bank tags.",
+    "image": "",
+    "featured": true,
+    "technologies": {
+      "languages": ["TypeScript", "HTML", "CSS"],
+      "frameworks": ["React", "Node.js"],
+      "libraries": ["Chakra UI"],
+      "databases": ["Supabase"],
+      "hosting": ["Vercel"],
+      "tools": ["Git", "Zod"],
+      "architecture": ["Vite", "Full Stack"]
+    },
+    "tags": [
+      "React",
+      "Vite",
+      "Supabase",
+      "TypeScript",
+      "Supabase",
+      "Vite",
+      "Full Stack",
+      "Vercel",
+      "Web App"
+    ],
+    "links": {
+      "github": "https://github.com/bennettsf/osrs-bank-tags-app",
+      "demo": "https://osrs-bank-tags-app.vercel.app/"
+    }
   }
 ]
