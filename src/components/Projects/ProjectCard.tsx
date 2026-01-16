@@ -54,6 +54,7 @@ function ProjectCard({ project }: { project: Project }) {
           position="absolute"
           bottom={4}
           right={4}
+          zIndex={2}
           transition="all 0.2s ease-in-out"
           _hover={{
             borderColor: 'teal.500',

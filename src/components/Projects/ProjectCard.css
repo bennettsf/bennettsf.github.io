@@ -20,7 +20,7 @@
   background-size: cover;
   filter: blur(2px);
   opacity: 0.4;
-  z-index: 0;
+  z-index: -1;
 }
 
 .project-card:hover {
