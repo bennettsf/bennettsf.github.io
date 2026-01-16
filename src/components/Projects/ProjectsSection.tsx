@@ -19,14 +19,9 @@ const ProjectsSection = () => {
       : projects.filter((project) => project.tags.some((tag) => selectedTags.includes(tag)));
 
   return (
-    <FullScreenSection
-      textAlign="center"
-      py={16}
-      id="projects-section"
-      width="100%"
-      display="flex"
-      justifyContent="center"
-    >
+    <FullScreenSection textAlign="center" py={16} id="projects-section" width="100%" display="flex">
+      <Heading size={{ md: '4xl', sm: '3xl' }}>Featured Projects</Heading>
+      <ProjectTags />
       <Box
         display="flex"
         flexDirection="column"
@@ -35,8 +30,6 @@ const ProjectsSection = () => {
         maxWidth="80%"
         width="100%"
       >
-        <Heading size={{ md: '4xl', sm: '3xl' }}>Featured Projects</Heading>
-        <ProjectTags />
         {/* Render project cards here using the projects state */}
         <Grid templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={6}>
           {filteredProjects.map((project) => (
