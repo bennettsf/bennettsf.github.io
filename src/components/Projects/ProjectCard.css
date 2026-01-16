@@ -7,6 +7,25 @@
   color: var(--textColor);
   width: 100%;
   min-height: 200px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: blur(2px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 3px 8px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 .project-content {
@@ -16,6 +35,8 @@
   justify-content: space-between;
   flex: 1;
   height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .project-header {
@@ -26,6 +47,6 @@
   margin-top: 16px;
   font-size: 0.875rem;
   align-self: flex-end;
-  color: #727272;
+  color: #bfbfbf;
   width: 100%;
 }

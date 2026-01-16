@@ -3,7 +3,7 @@
     "id": "nsc-events",
     "title": "NSC Events",
     "description": "A full-stack web app for creating, publishing, and managing campus events at North Seattle College.",
-    "image": "",
+    "image": "nsc_events.png",
     "featured": true,
     "technologies": {
       "languages": ["TypeScript", "HTML", "CSS"],
@@ -55,19 +55,23 @@
     "id": "portfolio",
     "title": "Developer Portfolio",
     "description": "A responsive web portfolio built with Vite, React, TypeScript, and Chakra UI to showcase my projects, skills, and professional experience.",
-    "image": "",
+    "image": "portfolio.png",
     "featured": true,
     "technologies": {
       "languages": ["TypeScript", "HTML", "CSS"],
       "frameworks": ["React", "Vite"],
       "libraries": ["Chakra UI"],
+      "databases": [],
       "tools": ["Git"],
       "architecture": []
     },
     "tags": ["React", "Vite", "TypeScript", "Portfolio", "Chakra UI", "Responsive Design"],
     "links": {
       "github": "https://github.com/bennettsf/bennettsf.github.io",
-      "demo": null
+      "demo": {
+        "url": "https://bennettsf.github.io",
+        "label": "bennettsf.github.io"
+      }
     }
   },
   {
@@ -80,6 +84,7 @@
       "languages": ["Python", "HTML", "CSS"],
       "frameworks": ["Django"],
       "libraries": ["PyDictionary"],
+      "databases": [],
       "tools": ["Git"],
       "architecture": []
     },
@@ -93,7 +98,7 @@
     "id": "osrs-bank-tags",
     "title": "OSRS Bank Tags",
     "description": "A full-stack web app for publishing, managing, and exporting Old School RuneScape bank tags.",
-    "image": "",
+    "image": "osrs_bank_tags.png",
     "featured": true,
     "technologies": {
       "languages": ["TypeScript", "HTML", "CSS"],
@@ -117,7 +122,10 @@
     ],
     "links": {
       "github": "https://github.com/bennettsf/osrs-bank-tags-app",
-      "demo": "https://osrs-bank-tags-app.vercel.app/"
+      "demo": {
+        "url": "https://osrs-bank-tags.vercel.app/",
+        "label": "osrs-bank-tags.vercel.app"
+      }
     }
   }
 ]

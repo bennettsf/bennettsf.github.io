@@ -16,7 +16,10 @@ interface Project {
   tags: string[];
   links: {
     github: string;
-    demo: string | null;
+    demo: {
+      url: string;
+      label: string;
+    } | null;
   };
 }
 export type { Project };

@@ -7,6 +7,11 @@ import './ProjectCard.css';
 function ProjectCard({ project }: { project: Project }) {
   const textColor = useColorModeValue('black', 'white');
 
+  const getImageUrl = (imagePath: string) => {
+    if (!imagePath) return '';
+    return new URL(`../../assets/${imagePath}`, import.meta.url).href;
+  };
+
   return (
     <GridItem
       colSpan={{ base: 1, md: project.featured ? 2 : 1 }}
@@ -19,12 +24,30 @@ function ProjectCard({ project }: { project: Project }) {
         className="project-card"
         position="relative"
       >
+        {project.image && (
+          <div
+            className="card-background"
+            style={{ backgroundImage: `url(${getImageUrl(project.image)})` }}
+          ></div>
+        )}
         <Box className="project-content">
           <Heading size={{ md: 'lg' }}>{project.title}</Heading>
           <Text>{project.description}</Text>
+          {project.links.demo && (
+            <Text>
+              Demo:{' '}
+              <a href={project.links.demo.url} target="_blank" rel="noopener noreferrer">
+                {project.links.demo.label}
+              </a>
+            </Text>
+          )}
           <Text className="project-technologies" fontSize="sm">
             Technologies:{' '}
-            {[...project.technologies.languages, ...project.technologies.frameworks].join(', ')}
+            {[
+              ...project.technologies.languages,
+              ...project.technologies.frameworks,
+              ...project.technologies.databases,
+            ].join(', ')}
           </Text>
         </Box>
         <Box
